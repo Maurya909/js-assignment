@@ -1,0 +1,25 @@
+
+
+  <FORM ID="demoMatch" NAME="demo" METHOD=POST ACTION="javascript:void(0)">
+<P>Regexpression: <INPUT TYPE=TEXT NAME="regular" VALUE="" SIZE=50></P>
+<P>String: <INPUT TYPE=TEXT NAME="subject" 
+   VALUE="This is a test" SIZE=50></P>
+<INPUT TYPE=SUBMIT VALUE="Test Match" ONCLICK="Match()">
+
+
+
+</FORM>
+
+
+<script>
+function Match() {
+  var regex = new RegExp(document.demo.regular.value);
+  if (document.demo.subject.value.match(regex)) {
+    alert("match Successful");
+  } else {
+    alert("No match");
+  }
+}
+
+
+</script>
